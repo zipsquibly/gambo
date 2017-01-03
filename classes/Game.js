@@ -125,11 +125,19 @@ class Game {
 function testForWinner(board) {
   let winner = false;
   console.log(board);
-  _.times(3).find(function(i) {
-    winner = board[i][0][0] === board[i][1][0] && board[i][1][0] === board[i][2][0] ? board[i][1][0] : false;
-    winner = winner || board[0][i][0] === board[1][i][0] && board[1][i][0] === board[2][i][0] ? board[1][i][0] : false;
-    return winner;
-  });
+  // _.times(3).find(function(i) {
+  //   winner = board[i][0][0] === board[i][1][0] && board[i][1][0] === board[i][2][0] ? board[i][1][0] : false;
+  //   winner = winner || board[0][i][0] === board[1][i][0] && board[1][i][0] === board[2][i][0] ? board[1][i][0] : false;
+  //   return winner;
+  // });
+  winner = winner || board[0][0][0] === board[0][1][0] && board[0][1][0] === board[0][2][0] ? board[0][0][0] : false;
+  winner = winner || board[1][0][0] === board[1][1][0] && board[1][1][0] === board[1][2][0] ? board[1][0][0] : false;
+  winner = winner || board[2][0][0] === board[2][1][0] && board[2][1][0] === board[2][2][0] ? board[2][0][0] : false;
+
+  winner = winner || board[0][0][0] === board[1][0][0] && board[1][0][0] === board[2][0][0] ? board[0][0][0] : false;
+  winner = winner || board[0][1][0] === board[1][1][0] && board[1][1][0] === board[2][1][0] ? board[1][0][0] : false;
+  winner = winner || board[0][2][0] === board[1][2][0] && board[1][2][0] === board[2][2][0] ? board[2][0][0] : false;
+
   winner = winner || board[0][0][0] === board[1][1][0] && board[1][1][0] === board[2][2][0] ? board[1][1][0] : false;
   winner = winner || board[2][0][0] === board[1][1][0] && board[1][1][0] === board[0][2][0] ? board[1][1][0] : false;
   return winner;
