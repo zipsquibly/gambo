@@ -19,11 +19,15 @@
   "dependencies": {
     "koa": "^1.2.4",
     "koa-better-body": "^3.0.2",
+    "koa-convert": "^1.2.0",
     "koa-router": "^5.4.0",
     "koa-send": "^3.2.0",
+    "koa-session": "^3.4.0",
     "koa-static": "^2.0.0",
     "koa-views": "^5.2.0",
+    "lodash": "^4.17.4",
     "socket.io": "^1.7.2",
+    "tv4": "^1.2.7",
     "uuid": "^3.0.1"
   }
 }
